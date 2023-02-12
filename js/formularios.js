@@ -9,9 +9,8 @@ const sendMail = (asunto, email, mensaje) => {
       para: ["lucaspintos909@gmail.com"],
     }),
     headers: {
-      "Content-type": "application/json; charset=UTF-8",
-      "Access-Control-Allow-Origin": "*", // Required for CORS support to work
-      "Accept": "*/*"
+      "Content-type": "application/json;",
+      "Access-Control-Allow-Origin": "https://feat-formularios--statik-accidentes-transito.netlify.app", // Required for CORS support to work
     },
   })
     .then(function (response) {
