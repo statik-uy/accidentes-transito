@@ -111,30 +111,31 @@
         <div class="row g-0">
             <div class="col-lg-6 py-6 px-5">
                 <h1 class="display-5 mb-4">Complete el formulario con su consulta y nos comunicaremos a la brevedad</h1>
-                <form>
+                <form id="formulario-consulta">
                     <div class="row g-3">
                         <div class="col-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="form-floating-1" placeholder="John Doe">
-                                <label for="form-floating-1">Nombre</label>
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="John Doe" value="Lucas">
+                                <label for="nombre">Nombre</label>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-floating">
-                                <input type="email" class="form-control" id="form-floating-2" placeholder="name@example.com">
-                                <label for="form-floating-2">Email</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" value="lucaspintos909@gmail.com">
+                                <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="form-floating-3" placeholder="Subject">
-                                <label for="form-floating-3">Asunto</label>
+                                <input type="text" class="form-control" id="motivo" name="motivo" placeholder="Subject" value="Consulta sobre accidente de moto">
+                                <label for="motivo">Motivo</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Message" id="form-floating-4" style="height: 150px"></textarea>
-                                <label for="form-floating-4">Mensaje</label>
+                                <textarea class="form-control" placeholder="Message" id="mensaje" name="mensaje" style="height: 150px">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat dignissimos quae est recusandae magnam cumque incidunt ab! Quas, ipsum animi tempora aspernatur, nam asperiores dolor ut a aliquam, nostrum facere.
+                                </textarea>
+                                <label for="mensaje">Mensaje</label>
                               </div>
                         </div>
                         <div class="col-12">
@@ -225,6 +226,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/formularios.js"></script>
 </body>
 
 </html>
