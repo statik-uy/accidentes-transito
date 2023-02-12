@@ -4,14 +4,14 @@ const sendMail = (asunto, email, mensaje) => {
   fetch("https://m76x7ulnva.execute-api.sa-east-1.amazonaws.com/sendMail", {
     method: "POST",
     body: JSON.stringify({
-      "asunto": asunto,
-      "mensaje": mensaje,
-      "para": [
-        "lucaspintos909@gmail.com"
-      ]
+      asunto: asunto,
+      mensaje: mensaje,
+      para: ["lucaspintos909@gmail.com"],
     }),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
+      "Access-Control-Allow-Origin": "*", // Required for CORS support to work
+      "Accept": "*/*"
     },
   })
     .then(function (response) {
