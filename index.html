@@ -337,28 +337,28 @@
             <div class="col-lg-6 py-6 px-5">
                 <h1 class="display-5 mb-4">Agenda una cita</h1>
                 <p class="mb-4">Te permite solicitar una cita para acudir a nuestras oficinas en el horario que más te convenga.</p>
-                <form>
+                <form id="formulario-agendar-cita">
                     <div class="row gx-3">
                         <div class="col-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="form-floating-1" placeholder="John Doe">
+                                <input required name="nombre" type="text" class="form-control" id="form-floating-1" placeholder="John Doe">
                                 <label for="form-floating-1">Nombre</label>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="form-floating-2" placeholder="name@example.com">
+                                <input required name="email" type="email" class="form-control" id="form-floating-2" placeholder="name@example.com">
                                 <label for="form-floating-2">Email</label>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-floating">
-                                <select class="form-select" id="floatingSelect" aria-label="Financial Consultancy">
-                                    <option selected>Accidente de transito</option>
-                                    <option value="1">Derecho de Familia</option>
-                                    <option value="2">Derecho Civil</option>
-                                    <option value="2">Derecho de Seguros</option>
-                                    <option value="2">Derecho Laboral</option>
+                                <select required name="tipo" class="form-select" id="floatingSelect" aria-label="Financial Consultancy">
+                                    <option value="1" selected>Accidente de transito</option>
+                                    <option value="2">Derecho de Familia</option>
+                                    <option value="3">Derecho Civil</option>
+                                    <option value="4">Derecho de Seguros</option>
+                                    <option value="5">Derecho Laboral</option>
                                 </select>
                                 <label for="floatingSelect">Selecciona</label>
                             </div>
@@ -613,6 +613,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script type="module" src="js/formularios/agendar-cita.js"></script>
 </body>
 
 </html>
