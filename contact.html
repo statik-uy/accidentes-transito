@@ -157,14 +157,16 @@
     <!-- Contact End -->
 
     <!-- Notifications -->
-    <div class="toast-container position-fixed top-10 start-50 translate-middle-x">
-        <div id="notification" class="toast text-bg-success" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-body">
-                <p id="notification-message"></p>
+    <div class="toast-container position-fixed top-0 start-50 translate-middle-x mt-5">
+        <div id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body" style="display: flex; justify-content: space-between;">
+                <p id="notification-message" style="margin: 0;"></p>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
         </div>
     </div>
     <!-- Notifications End -->
+
     <!-- Footer Start -->
     <div class="container-fluid bg-primary text-secondary p-5">
         <div class="row g-5">
@@ -237,7 +239,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="js/formularios.js"></script>
+    <script type="module" src="js/formularios.js"></script>
 </body>
 
 </html>
