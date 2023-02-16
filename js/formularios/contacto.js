@@ -1,5 +1,5 @@
 "use strict";
-import { sendMail, showNotification } from "./utils.js";
+import { sendMail, showNotification } from "../utils.js";
 
 const formularioConsulta = document.getElementById("formulario-consulta");
 
