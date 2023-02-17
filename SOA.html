@@ -24,6 +24,7 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
@@ -112,47 +113,47 @@
         <div class="row g-0">
             <div class="col-lg-6 py-6 px-5">
                 <h1 class="display-5 mb-4">Complete el formulario y nos comunicaremos a la brevedad</h1>
-                <form>
+                <form id="formulario-soa">
                     <div class="row g-3">
                         <div class="col-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="form-floating-1" placeholder="John Doe">
+                                <input required type="text" class="form-control" id="form-floating-1" name="nombre" placeholder="John Doe">
                                 <label for="form-floating-1">Nombre</label>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-floating">
-                                <input type="email" class="form-control" id="form-floating-2" placeholder="name@example.com">
+                                <input required type="email" class="form-control" id="form-floating-2" name="email" placeholder="name@example.com">
                                 <label for="form-floating-2">Email</label>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-floating">
-                                <input type="" class="form-control" id="form-floating-2" placeholder="Cobertura">
+                                <input required type="" class="form-control" id="form-floating-2" name="cobertura" placeholder="Cobertura">
                                 <label for="form-floating-2">Telefono</label>
                             </div>
                         </div>
                         <!-- <div class="col-6">
                             <div class="form-floating">
-                                <input type="" class="form-control" id="form-floating-2" placeholder="Tipo de Vehículo">
+                                <input required type="" class="form-control" id="form-floating-2" name="vehiculo" placeholder="Tipo de Vehículo">
                                 <label for="form-floating-2">Vehículo</label>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-floating">
-                                <input type="" class="form-control" id="form-floating-2" placeholder="Marca">
+                                <input required type="" class="form-control" id="form-floating-2" name="marca" placeholder="Marca">
                                 <label for="form-floating-2">Marca</label>
                             </div>
                         </div> -->
                         <div class="col-6">
                             <div class="form-floating">
-                                <input type="" class="form-control" id="form-floating-2" placeholder="Asunto">
+                                <input required type="" class="form-control" id="form-floating-2" name="asunto" placeholder="Asunto">
                                 <label for="form-floating-2">Fecha Accidente</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Message" id="form-floating-4" style="height: 150px"></textarea>
+                                <textarea required class="form-control" placeholder="Message" id="form-floating-4" name="mensaje" style="height: 150px"></textarea>
                                 <label for="form-floating-4">Mensaje: Describa el accidente y las lesiones provocadas</label>
                               </div>
                         </div>
@@ -230,6 +231,16 @@
     </div>
     <!-- Footer End -->
 
+    <!-- Notifications -->
+    <div class="toast-container position-fixed top-0 start-50 translate-middle-x mt-5">
+        <div id="notification" class="toast text-bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body" style="display: flex; justify-content: space-between;">
+                <p id="notification-message" style="margin: 0;"></p>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <!-- Notifications End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -237,13 +248,14 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script type="module" src="js/formularios/soa.js"></script>
 </body>
 
 </html>
