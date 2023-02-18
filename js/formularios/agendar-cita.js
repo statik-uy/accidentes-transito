@@ -5,22 +5,19 @@ const formulario = document.getElementById("formulario-agendar-cita");
 
 const opciones = {
   1: "Accidente de transito",
-  2: "Derecho de Familia",
-  3: "Derecho Civil",
-  4: "Derecho de Seguros",
-  5: "Derecho Laboral",
+  2: "Derecho de Seguros",
+  3: "Derecho Penal",
+  4: "Derecho Civil",
+  5: "Servicios Notariales",
 };
 
 if (formulario) {
   formulario.addEventListener("submit", (event) => {
     event.preventDefault();
-
     showNotification("Procesando solicitud");
-    const campos = ["email"];
+    const campos = ["nombre", "telefono", "email"];
 
-    let cuerpo = `<strong>${event.target.nombre.name.toUpperCase()}</strong>: ${
-      event.target.nombre.value
-    } <br/> <br/>`;
+    let cuerpo = ``;
 
     campos.forEach((campo) => {
       cuerpo += `<strong>${event.target[campo].name.toUpperCase()}</strong>: ${
