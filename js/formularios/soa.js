@@ -11,15 +11,14 @@ if (formulario) {
     const campos = [
       "nombre",
       "email",
-      "cobertura",
-      "vehiculo",
-      "marca",
-      "asunto",
+      "telefono"
     ];
     let cuerpo = ""
     campos.forEach((campo) => {
       cuerpo += `<strong>${event.target[campo].name.toUpperCase()}</strong>: ${event.target[campo].value} <br/>`;
     });
+    const fecha = moment(event.target.fecha.value)
+    cuerpo += `<br/><strong>${event.target.fecha.name.toUpperCase()}</strong>: ${fecha.format("D/M/yyyy")} <br/>`;
     cuerpo += `<br/><strong>${event.target.mensaje.name.toUpperCase()}</strong>: ${event.target.mensaje.value} <br/>`;
 
 

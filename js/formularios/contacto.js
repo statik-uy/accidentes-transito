@@ -13,9 +13,11 @@ if (formularioConsulta) {
     const motivo = event.target.motivo.value;
     const email = event.target.email.value;
     const mensaje = event.target.mensaje.value;
+    const telefono = event.target.telefono.value;
 
     const cuerpo = `
 <strong>Nombre</strong>: ${nombre} <br/>
+<strong>Teléfono</strong>: ${telefono} <br/>
 <strong>Motivo de contacto</strong>: ${motivo}<br/>
 <br/>
 <strong>Mensaje</strong>: ${mensaje}<br/>
