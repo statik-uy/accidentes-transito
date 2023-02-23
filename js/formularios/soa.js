@@ -23,8 +23,8 @@ if (formulario) {
 
 
     sendMail(
-      "Formulario SOA",
-      event.target.email.value,
+      `Formulario SOA`,
+      event.target.nombre.value,
       cuerpo,
       "El formulario SOA fue enviado!"
     );
