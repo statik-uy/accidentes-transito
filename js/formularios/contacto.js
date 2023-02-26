@@ -23,7 +23,7 @@ if (formularioConsulta) {
 <strong>Mensaje</strong>: ${mensaje}<br/>
 `;
 
-    sendMail("Formulario de Contacto", email, cuerpo, "La solicitud de contacto fue enviada!");
+    sendMail(`Formulario de Contacto`, nombre, cuerpo, "La solicitud de contacto fue enviada!");
     formularioConsulta.reset()
   });
 }

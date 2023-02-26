@@ -30,8 +30,8 @@ if (formulario) {
     } <br/>`;
 
     sendMail(
-      "Agendar cita",
-      event.target.email.value,
+      `Agendar cita`,
+      event.target.nombre.value,
       cuerpo,
       "Su solicitud de cita fue enviada!"
     );

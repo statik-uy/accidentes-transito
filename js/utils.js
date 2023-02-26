@@ -23,7 +23,7 @@ const showNotification = (message, type = "", callback = () => {}) => {
   toast.show();
 };
 
-const sendMail = async (subject, email, message, successMessage) => {
+const sendMail = async (subject, nombre, message, successMessage) => {
   showNotification("Procesando solicitud.", "loading");
   const cuerpo = generateEmailTemplate(subject, message);
   const res = await fetch(
@@ -36,9 +36,10 @@ const sendMail = async (subject, email, message, successMessage) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        asunto: subject,
+        de: `"${subject}" <contacto@transitoabogados.com.uy>`,
+        asunto: `${subject} - ${nombre}`,
         mensaje: cuerpo,
-        para: ["lucaspintos909@gmail.com"],
+        para: ["transitoabogadosuy@gmail.com"],
       }),
     }
   );
